@@ -1,0 +1,70 @@
+.card {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.box {
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carte {
+  height: 90%;
+  width: 48%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+}
+
+.gauche {
+  height: 100%;
+  width: 48%;
+  overflow: hidden;
+}
+
+.gauche img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carte:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.droite {
+  height: 100%;
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .carte {
+    height: 48%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,134 @@
+.social {
+  height: 55vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.box {
+  height: 95%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.gauche {
+  height: 95%;
+  width: 45%;
+  overflow: hidden;
+}
+
+.gauche img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.droite {
+  height: 95%;
+  width: 50%;
+}
+
+.droite h2 {
+  font-size: 40px;
+}
+
+.droite p {
+  font-size: 22px;
+}
+
+.input {
+  position: relative;
+}
+
+.input input {
+  padding-right: 50px;
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+  outline: none;
+  width: 80%;
+  height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding-left: 20px;
+}
+
+.input button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 25%;
+  border: 1px solid #ccc;
+  background-color: #5a8f7b;
+  color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.bulles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.bulle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #5a8f7b;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: 0.4s ease-in-out;
+}
+
+.bulle:hover {
+  background-color: #33584a;
+  transition: 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .social {
+    height: 120vh;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .gauche {
+    height: 48%;
+    width: 100%;
+  }
+
+  .droite {
+    height: 48%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,281 @@
+.bibli {
+  height: fit-content;
+  width: 100%;
+}
+
+.box {
+  height: fit-content;
+  width: 80%;
+  margin: auto;
+}
+
+.titre {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Bibli {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(22, 22, 22);
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 0.5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 0.5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+.megabox {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.details {
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 40%;
+  overflow-wrap: break-word;
+  background-color: #fff;
+  bottom: 0;
+  transition: height 0.5s ease;
+  pointer-events: fill !important;
+}
+
+.details h2 {
+  font-size: 18px;
+  color: #133b58;
+}
+
+.cartes {
+  height: 400px;
+  width: 250px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  overflow: hidden;
+}
+
+.back {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.img {
+  height: 60%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cartes:hover .details {
+  height: 60%;
+}
+
+.cartes:hover .back {
+  transform: translateY(-1%);
+}
+
+.details button {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer !important;
+}
+
+.cartes:hover .details button {
+  display: block;
+  border: none;
+  background-color: #5a8f7b;
+  color: white;
+  border-radius: 3px;
+  height: 50px;
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+.cartes:hover .btnAcheter {
+  display: block;
+  top: 20;
+  right: 10;
+}
+
+.btnAcheter {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background-color: #5a8f7b;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.megabox button {
+  border: none;
+  color: white;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #04402c;
+  position: relative;
+  overflow: hidden;
+}
+
+.megabox button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.megabox button:hover span {
+  color: rgb(249, 249, 249);
+}
+
+.megabox button::before,
+.megabox button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.megabox button::before {
+  content: "";
+  background: #5a8f7b;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.megabox button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+@media only screen and (max-width: 426px) {
+  .Bibli {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+}
