@@ -29,7 +29,7 @@ export default function Home(props) {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  }, []);
+  }, [props.livres, router]);
 
   const pushFonction = (id) => {
     router.push(`/${id}`);
